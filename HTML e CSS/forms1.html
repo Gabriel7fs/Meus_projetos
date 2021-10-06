@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title> Formulário HTML </title>
+        <link rel="stylesheet" href="estiloforms.css">
+    </head>
+    <body>
+        <p class="solid" align="left" style="color:#DCDCDC;"><img src="img/logocatolica.jpg" style="width:200px;height:70px;"></p>
+        <table border="0" width="100%">
+            <tr>
+                <td width="30%"></td>
+                
+                <td width="40%">
+                    <div class="first">
+                        <form name="formsc" action="enviar.php" method="post">
+                        <h3>Preencha o formulário com seus dados pessoais</h3>
+                        <h4>
+                            <label for="fname">Nome</label><br>
+                            <input type="text" id="fname" name="firstname" placeholder="Nome"><br>
+                            <label for="lname">Sobrenome</label><br>
+                            <input type="text" id="lname" name="lastname" placeholder="Sobrenome"><br>
+                            <label for="email">e-mail</label><br>
+                            <input type="email" id="email" name="email" placeholder="e-mail"><br>
+                            <label for="password">Senha</label><br>
+                            <input type="password" id="password" name="password" placeholder="Senha"><br>
+                        </h4>
+                        <br>
+                                <h4>Sexo<br>
+                                    <input type="radio" id="masculine" name="gender" value="sexo">
+                                    <label for="masculine">Masculino</label><br>
+                                    <input type="radio" id="female" name="gender" value="sexo">
+                                    <label for="female">Femenino</label><br>
+                                </h4>
+                        <br>
+                                <h4>Estado civíl<br>
+                                    <input type="radio" id="married" name="maritalstatus" value="married">
+                                    <label for="married">Casado</label><br>
+                                    <input type="radio" id="not married" name="maritalstatus" value="not married">
+                                    <label for="not married">Solteiro</label><br>
+                                    <input type="radio" id="other" name="maritalstatus" value="other">
+                                    <label for="other">Outros</label>
+                                </h4>
+                        <br>
+                                <h4>Comida favorita<br>
+                                    <input type="radio" id="churrasco" name="comidafavorita" value="churrasco">
+                                    <label for="churrasco">Churrasco</label><br>
+                                    <input type="radio" id="bife a parmegiana" name="comidafavorita" value="bife a parmegiana">
+                                    <label for="bife a parmegiana">Bife a parmegiana</label><br>
+                                    <input type="radio" id="pizza" name="comidafavorita" value="pizza">
+                                    <label for="pizza">Pizza</label>
+                                </h4>
+                        <br>
+                                <h4>Selecione sua cor preferida: <input type="color" name="favcor" value="#ff3333"></h4>
+                        <br>
+                                <h4>Data de Nascimento: <input type="date" name="nascimento"></h4>
+                        <br>
+                                <input type="button" value="Clique Aqui" onclick="msg()"><br>
+                                                    <script>
+                                                        function msg() {
+                                                            alert("Bem vindo à Catolica SC!");
+                                                            }
+                                                     </script>
+                        <br>
+                        <input type="submit" onclick="return validar()">
+                                                     <script language="javascript" type="text/javascript">
+                                                        function validar(){
+                                                            var firstname = formsc.firstname.value;
+                                                            var lastname = formsc.lastname.value;
+                                                            var email = formsc.email.value;
+                                                            var password = formsc.password.value;
+                                                            if (firstname == ""){
+                                                                alert ('Preencha o campo obrigatório!');
+                                                                formsc.firstname.focus();
+                                                                return false;
+                                                            }
+                                                            if (lastname == ""){
+                                                                alert ('Preencha o campo obrigatório!');
+                                                                formsc.lastname.focus();
+                                                                return false;
+                                                            }
+                                                            if (email == ""){
+                                                                alert ('Preencha o campo obrigatório!');
+                                                                formsc.email.focus();
+                                                                return false;
+                                                            }
+                                                            if (password == ""){
+                                                                alert ('Preencha o campo obrigatório!');
+                                                                formsc.password.focus();
+                                                                return false;
+                                                            }
+                                                        }
+                                                    </script>
+                        <br>       
+                        <h3>Obrigado pela preferência!</h3>
+                    </form>
+                    </div>
+                </td>
+
+                <td width="30%"></td>
+            </tr>
+        </table>
+    </body>
+</html>
