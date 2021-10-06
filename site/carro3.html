@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Informações do veículo</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="newstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Icone-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/mavefavicon.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <!--------Barra de navegação-------->
+	<ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#projetos">Carros</a></li>
+        <li><a href="index.html#contatos">Alunos</a></li>
+    </ul>
+    <!--------Produto-------->
+    <table>
+        <tr>
+            <div class="sessao-header">
+                <h1>Informações do veículo</h1>
+            </div>
+            <td width="60%">
+                <section class="pedido">
+                    <div id="carro3">
+                        <div class="img-wrapper">
+                            <img src="images/veneno int.jpg" alt="">
+                            <img src="images/veneno.jpeg" alt="">
+                            <img src="images/new1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Lamborghini Veneno - R$ 17 milhões</h3>
+                            <p>A Lamborghini também fez um modelo extravagante e único, o Veneno. Teve apenas 14 unidades 
+                                produzidas entre 2014 e 2015, cada uma custando cerca de US$ 4,5 milhões 
+                                - dependendo de como era equipado. Estava disponível nas versões conversível e cupê, 
+                                e usava uma versão mais potente do motor 6.5 V12 do Aventador, 
+                                agora gerando 750 cv e 62,1 kgfm. Chegava até 96 km/h em 2,9 segundos.</p>
+                                <button>Comprar</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="sessao-projetos">
+                    <div class="sessao-outros">
+                        <h1>Outros veículos</h1>
+                    </div>
+                    <div class="projetos">
+                        <div class="card">
+                            <div class="card-image-wrapper">
+                                <img src="images/Lykan.jpg">
+                            </div>
+                            <div class="card-info">
+                                <h2>W Motors Lykan Hypersport</h2>
+                                <h3>R$ 12,8 milhões</h3>
+                                <input type="button" value="Ver produto" onclick="carro2()">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image-wrapper">
+                                <img src="images/mercedes2.jpg">
+                            </div>
+                            <div class="card-info">
+                                <h2>Mercedes-Maybach Exelero</h2>
+                                <h3>R$ 30,2 milhões</h3>
+                                <input type="button" value="Ver produto" onclick="carro4()">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </td>
+            <td width="10%"></td>
+            <td width="30%">
+                <div class="right">
+                    <form name="formsc" action="enviar.php" method="post">
+                        <h3>Tem alguma dúvida? Fale conosco!</h3>
+                            <label for="fname"><h2>Nome completo</h2></label>
+                            <input type="text" id="fname" name="firstname" placeholder="Nome completo"><br>
+                            <label for="email"><h2>e-mail</h2></label>
+                            <input type="email" id="email" name="email" placeholder="e-mail"><br>
+                            <label for="texto"><h2>Pergunta</h2></label>
+                            <textarea rows="8" cols="40" maxlength="500" placeholder="Envie sua dúvida!"></textarea>
+                            <input type="submit" onclick="return validar()">
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script language="javascript" type="text/javascript">
+        function validar(){
+            var firstname = formsc.firstname.value;
+            var email = formsc.email.value;
+            if (firstname == ""){
+                 alert ('Preencha o campo obrigatório!');
+                 formsc.firstname.focus();
+                 return false;
+                 }
+             if (email == ""){
+                 alert ('Preencha o campo obrigatório!');
+                 formsc.email.focus();
+                 return false;
+                 }
+                 
+             }
+     </script>
+</body>
+<script src="script.js"></script>
+</html>
